@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Numbers } from './models/numbers.models';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'contatore-Laguda';
+  numeri: Numbers = new Numbers(0, 0)
 }
