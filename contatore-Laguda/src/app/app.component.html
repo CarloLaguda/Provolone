@@ -1,7 +1,10 @@
 {{title}}
 <p></p>
 <br>
-<input type="number"> 
+<input type="number" #numero> 
 <br>
-<button>+</button>
-<button>-</button>
+<button (click) = "piu(numero)">+</button>
+<button (click) = "meno(numero)">-</button>
+
+<app-cont [numeri_visualizzare] = "numeri"></app-cont>
+

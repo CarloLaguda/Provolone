@@ -1,14 +1,32 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Numbers } from './models/numbers.models';
+import { ContComponent } from './cont/cont.component';
+import { HtmlParser } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,ContComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'contatore-Laguda';
   numeri: Numbers = new Numbers(0, 0)
+  numeroint: number = 0;
+  piu(numero: HTMLInputElement): boolean
+  {
+    this.numeroint = Number(numero.value)
+    this.numeri.piu(this.numeroint)
+    //this.vett.push(new Numbers(this.numeri.totale, this.numeri.nClick))
+    return false
+  }
+
+  meno(numero: HTMLInputElement): boolean
+  {
+    this.numeroint = Number(numero.value)
+    this.numeri.meno(this.numeroint)
+    //this.vett.push(new Numbers(this.numeri.totale, this.numeri.nClick))
+    return false
+  }
 }
