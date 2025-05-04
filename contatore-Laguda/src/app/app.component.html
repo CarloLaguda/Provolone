@@ -5,6 +5,10 @@
 <br>
 <button (click) = "piu(numero)">+</button>
 <button (click) = "meno(numero)">-</button>
-
+<br>
+<button (click) = "fav()">Preferito</button>
 <app-cont [numeri_visualizzare] = "numeri"></app-cont>
+@for(num of prefe; track num){
+  <app-fav [numeri] = num></app-fav>
+}
 

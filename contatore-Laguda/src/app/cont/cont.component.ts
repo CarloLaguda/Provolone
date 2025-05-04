@@ -8,5 +8,5 @@ import { Numbers } from '../models/numbers.models';
   styleUrl: './cont.component.css'
 })
 export class ContComponent {
-  @Input() numeri_visualizzare :Numbers = new Numbers(0,0);
+ @Input() numeri_visualizzare :Numbers = new Numbers(0,0);
 }
