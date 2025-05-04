@@ -1,9 +1,7 @@
 {{title}}
-<p></p>
-<br>
 <input type="number" #numero> 
 <br>
-<button (click) = "piu(numero)">+</button>
+<button class(click) = "piu(numero)">+</button>
 <button (click) = "meno(numero)">-</button>
 <br>
 <button (click) = "fav()">Preferito</button>
@@ -11,4 +9,5 @@
 @for(num of prefe; track num){
   <app-fav [numeri] = num></app-fav>
 }
+
 

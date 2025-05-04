@@ -1,4 +1,7 @@
 <p>Preferito</p>
-<div>
+<div [ngStyle]="{'background-color': colore}">
     <p>{{numeri.totale}} --- {{numeri.nClick}}</p>
+    <div>
+        <button (click) = "sup()">Super</button>
+    </div>
 </div>
